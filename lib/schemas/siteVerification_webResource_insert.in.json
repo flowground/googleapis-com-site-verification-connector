@@ -1,0 +1,58 @@
+{
+    "type": "object",
+    "properties": {
+        "verificationMethod": {
+            "required": true,
+            "type": "string"
+        },
+        "fields": {
+            "type": "string"
+        },
+        "key": {
+            "type": "string"
+        },
+        "oauth_token": {
+            "type": "string"
+        },
+        "prettyPrint": {
+            "type": "boolean",
+            "default": false
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "userIp": {
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "id": {
+                    "description": "The string used to identify this site. This value should be used in the \"id\" portion of the REST URL for the Get, Update, and Delete operations.",
+                    "type": "string"
+                },
+                "owners": {
+                    "description": "The email addresses of all verified owners.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "site": {
+                    "description": "The address and type of a site that is verified or will be verified.",
+                    "properties": {
+                        "identifier": {
+                            "description": "The site identifier. If the type is set to SITE, the identifier is a URL. If the type is set to INET_DOMAIN, the site identifier is a domain name.",
+                            "type": "string"
+                        },
+                        "type": {
+                            "description": "The site type. Can be SITE or INET_DOMAIN (domain name).",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        }
+    }
+}
